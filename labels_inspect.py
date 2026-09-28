@@ -5,6 +5,10 @@ Author: Aditya Rao
 
 analyse = open("metadata/ptbxl_database.csv", 'r') # read the file in metadata
 
-header = analyse.readline() # read the first line
-print(header)
-analyse.close() # close the analysis.
+while True:
+    line = analyse.readline()
+    if line == "":
+        break
+    print(line)
+
+analyse.close()
